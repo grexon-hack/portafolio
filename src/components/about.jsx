@@ -15,10 +15,10 @@ export default function About() {
             con mucha creatividad y con desespero de aprender, mejorar y asi avanzar, escribeme, estare muy atento.
           </p>
         </div>
+      </div>
         <div className="logoAbout">
             <img src={logo} alt="logo react-redux" className="App-logo"/>
         </div>
-      </div>
     </div>
   );
 }
