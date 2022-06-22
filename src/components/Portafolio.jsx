@@ -52,7 +52,7 @@ export default function Portafolio() {
             <div className="mostrador">
 
             <h1>
-                mis proyectos
+                Mis proyectos
             </h1>
             <div className="mostrador-imagen">
                 {

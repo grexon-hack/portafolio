@@ -2,7 +2,7 @@ import icon from '../image/linkedin.png';
 import icon2 from '../image/github.png';
 import icon3 from '../image/whatsapp.png';
 import icon4 from '../image/cvPicture.png';
-import cv from '../image/CV.pdf'
+import cv from '../image/newCV.pdf'
 
 export default function Social() {
     return (
