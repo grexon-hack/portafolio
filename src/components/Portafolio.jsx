@@ -4,9 +4,17 @@ import image3 from '../image/countryApp.PNG';
 import image4 from '../image/moviesApp.PNG';
 import image5 from '../image/videogameApp.PNG';
 import image6 from '../image/clock25+5.PNG';
+import image7 from '../image/yourjob.PNG';
 
 
-let arrayPicture = [{
+let arrayPicture = [
+{
+    nombre: 'YourJob',
+    img: image7,
+    info: 'aplicacion creada para busqueda tanto de trabajos, como de empleados. hecha con react.js, redux, node.js, sequelize, express, postgres',
+    url: 'https://github.com/grexon-hack/yourjob',
+    deploy: 'https://your-job-seven.vercel.app'
+},{
     nombre: 'Calculadora',
     img: image,
     info: 'calculadora creada con tecnologias como: html, css, react y redux',
@@ -64,6 +72,8 @@ export default function Portafolio() {
                                 <div className='capaInfo'>
                                     <p>{data.info}</p>
                                     <button><a href={data.url} target="_blank" rel="noopener noreferrer">Ver</a></button>
+                                    
+                                    {data.deploy&& <button><a href={data.deploy} target="_blank" rel="noopener noreferrer">Deploy</a></button>}
                                 </div>
                             </div>
                         )
