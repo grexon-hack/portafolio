@@ -2,7 +2,7 @@ import image from '../image/calculadoraApp.PNG';
 import image2 from '../image/climaApp.PNG';
 import image3 from '../image/countryApp.PNG';
 import image4 from '../image/moviesApp.PNG';
-import image5 from '../image/videogameApp.PNG';
+import image5 from '../image/coomuldesa.PNG';
 import image6 from '../image/clock25+5.PNG';
 import image7 from '../image/yourjob.PNG';
 
@@ -19,6 +19,7 @@ let arrayPicture = [
     img: image,
     info: 'calculadora creada con tecnologias como: html, css, react y redux',
     url: 'https://codepen.io/gregori-S23',
+    deploy: 'https://grexon-hack.github.io/Calculadora/'
 
 },{
     nombre: 'App-Meteorologica',
@@ -39,11 +40,11 @@ let arrayPicture = [
     url: 'https://github.com/grexon-hack/movies',
 
 }, {
-    nombre: 'Sala-Videogame',
+    nombre: 'Coomuldesa',
     img: image5,
-    info: 'Aplicacion creada con tecnologias como: html, css y d3.js',
-    url: 'https://codepen.io/gregori-S23',
-
+    info: 'Tecnologias: Html, css, Jquery, Bootstrap 5',
+    url: 'https://github.com/grexon-hack/coomuldesa',
+    deploy: 'https://grexon-hack.github.io/coomuldesa'
 }, {
     nombre: 'clock-Break',
     img: image6,
@@ -71,7 +72,7 @@ export default function Portafolio() {
                                 <img src={data.img} alt="imagen" />
                                 <div className='capaInfo'>
                                     <p>{data.info}</p>
-                                    <button><a href={data.url} target="_blank" rel="noopener noreferrer">Ver</a></button>
+                                    <button><a href={data.url} target="_blank" rel="noopener noreferrer">{data.nombre === "clock-Break"?"Codepen":"Github"}</a></button>
                                     
                                     {data.deploy&& <button><a href={data.deploy} target="_blank" rel="noopener noreferrer">Deploy</a></button>}
                                 </div>

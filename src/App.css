@@ -7,7 +7,7 @@ nav {
   height: 60px;
   width: 100%;
   display: flex;
-  justify-content:right;
+  justify-content:space-between;
   background-color: aqua;
   z-index: 3;
 }
@@ -37,6 +37,20 @@ nav ul li:hover {
 }
 .active {
   text-decoration: underline 2px white;
+}
+.imageInitial {
+  animation: 1s linear initialImage;
+}
+
+@keyframes initialImage {
+  0% {
+    opacity: 0.5;
+    transform: translate(20px);
+  }
+  100% {
+    opacity: 1;
+    transform:translate(0);
+  }
 }
 
 .prueba {
@@ -325,7 +339,7 @@ nav ul li:hover {
 
 }
 
-.imagenesApp:hover div{
+.imagenesApp:hover .capaInfo{
   top: -250px;
 }
 
@@ -346,36 +360,36 @@ nav ul li:hover {
 }
 
 .iconSocial {
-  position: fixed;
-  z-index: 3;
-  top: 80px;
-  left: -40px;
+  display: flex;
+  flex-direction:row-reverse;
+  justify-content: center;
+  align-items: center;
 }
 
-.iconSocial img {
-  width:60px;
-}
 .linkedin {
   background-color: deepskyblue;
 }
 .github {
   background-color: dimgray;
 }
-.whatsapp {
-  background-color: lawngreen;
+.cv {
+  background-color:aliceblue;
+
 }
+
 
 .iconSocial div {
-  width: 100px;
-  border-radius: 20%;
-  display: flex;
-  justify-content: right;
+  font-size: 40px;
+  padding:0 10px;
 
 }
+.iconSocial div a {
+  text-decoration:none;
+  color:black;
+}
 .iconSocial div:hover{
-  position: relative;
-  right:-10px;
-  cursor: pointer;
+  transform:scale(1.1);
+  border-radius:20%;
 }
 .fuera {
   display: none;
@@ -387,7 +401,7 @@ nav ul li:hover {
 .fuera img {
   width: 50px;
   cursor:pointer;
-
+  border-radius:10px;
 }
 
 .modeLightDark {
@@ -431,6 +445,9 @@ nav ul li:hover {
   nav ul {
     width: 60%;
   }
+  .about .about-center {
+    width:100%;
+  }
 }
 
 @media (max-width : 820px) {
@@ -452,6 +469,9 @@ nav ul li:hover {
 @media (max-width: 800px){
   .about-center {
     flex-direction:column;
+  }
+  .about .about-center .motivacion {
+    width:100%;
   }
   .picture {
     height: 300px;
