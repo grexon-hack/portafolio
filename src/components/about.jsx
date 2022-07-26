@@ -7,7 +7,7 @@ export default function About() {
       <div className="about-center">
         <img src={image} alt="about me" className="picture" />
         <div className="motivacion">
-          <h2>Hola jefe</h2>
+          <h2>Hola</h2>
           <h3>mi nombre es José gregorio Sarabia lugo</h3>
           <p>
             Soy desarrollador full stack con bastante desempeño en las dos caras
@@ -19,7 +19,7 @@ export default function About() {
             funcionamiento. <br />soy Trabajador y estudiante, tambien responsable de una
             hermosa familia que no para de apoyarme y decirme que soy el mejor
             en lo que hago, asi que si quieres saber de que estoy hecho y
-            necesitas a una persona responsable, con mucha creatividad y ansioso de seguir avanzando, escribeme, estare muy
+            necesitas a una persona responsable, con mucha creatividad y ansioso por seguir avanzando, escribeme, estare muy
             atento.
           </p>
         </div>

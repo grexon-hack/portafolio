@@ -67,14 +67,18 @@ export default function Portafolio() {
                 {
                     arrayPicture.map((data, i) => {
                         return(
-                            <div key={i} className='imagenesApp'>
+                            <div key={i} className='containerImagenes'>
                                 <h3>{data.nombre}</h3>
+                                <div className="imagenesApp">
+
                                 <img src={data.img} alt="imagen" />
                                 <div className='capaInfo'>
                                     <p>{data.info}</p>
+                                    <div style={{display: 'flex'}}>
                                     <button><a href={data.url} target="_blank" rel="noopener noreferrer">{data.nombre === "clock-Break"?"Codepen":"Github"}</a></button>
-                                    
                                     {data.deploy&& <button><a href={data.deploy} target="_blank" rel="noopener noreferrer">Deploy</a></button>}
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         )

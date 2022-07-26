@@ -3,43 +3,17 @@
 }
 
 nav {
-  position: fixed;
-  height: 60px;
-  width: 100%;
-  display: flex;
-  justify-content:space-between;
-  background-color: aqua;
   z-index: 3;
-}
-nav ul {
-  display:flex;
-  width: 40%;
-  justify-content: space-around;
-  align-items: center;
-}
-nav ul li {
-  list-style: none;
-  cursor:pointer;
-  font-size: 18px;
-  font-weight: 500;
-  text-shadow: 0 0 5px azure;
-  padding: 8px;
-  border-radius:8px;
-  
-}
-nav ul li a {
-  text-decoration: none;
-  color: black;
-}
-nav ul li:hover {
-  transform: scale(1.1);
-
-}
-.active {
-  text-decoration: underline 2px white;
 }
 .imageInitial {
   animation: 1s linear initialImage;
+}
+
+.buttonUp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
 }
 
 @keyframes initialImage {
@@ -79,6 +53,7 @@ nav ul li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .targeta .font {
@@ -311,20 +286,20 @@ nav ul li:hover {
 
 .imagenesApp {
   width: 250px;
-  height: 300px;
+  height: 270px;
   overflow: hidden;
   border-radius: 8px;
 }
 
 .imagenesApp img {
   width: 100%;
-  height: 80%;
+  height: 100%;
   border-radius: 8px;
 }
 
 .capaInfo {
   width: 100%;
-  height: 81%;
+  height: 100%;
   position:relative;
   backdrop-filter: blur(20px);
   display: flex;
@@ -340,7 +315,7 @@ nav ul li:hover {
 }
 
 .imagenesApp:hover .capaInfo{
-  top: -250px;
+  top: -270px;
 }
 
 .imagenesApp button {
@@ -391,80 +366,24 @@ nav ul li:hover {
   transform:scale(1.1);
   border-radius:20%;
 }
-.fuera {
-  display: none;
-  position:fixed;
-  z-index:4;
-  top :10px;
-  right:10px;
-}
-.fuera img {
-  width: 50px;
-  cursor:pointer;
-  border-radius:10px;
-}
 
-.modeLightDark {
-  width:50px;
-  height:20px;
-  background-color: azure;
-  z-index:3;
-  position: absolute;
-  right: 10px;
-  top:80px;
-  border-radius: 20px;
-  display:flex;
-  flex-wrap: nowrap;
-  flex-grow: 1;
-  transition: all 2s ease;
-}
 
-.ball {
-  position: relative;
-  width: 30px;
-  background-color: black;
-  border-radius:50%;
+.modeDark {
   
-}
-
-.light {
-  width:22px;
+  position: absolute;
+  right: 30px;
+  top:80px;
+  z-index:3;
   cursor:pointer;
-  z-index: 3;
-  color: azure;
-}
-.dark {
-  width:22px;
-  cursor:pointer;
-  z-index: 3;
-  color:azure;
 }
 
 
 @media (max-width: 1000px) {
-  nav ul {
-    width: 60%;
-  }
   .about .about-center {
     width:100%;
   }
 }
 
-@media (max-width : 820px) {
-  .fuera {
-    display:block;
-  }
-  nav {
-    height: 150px;
-    top: -155px;
-    justify-content: center;
-    transition: all 2s ease;
-  }
-  nav ul {
-    flex-direction:column;
-  }
-  
-}
 
 @media (max-width: 800px){
   .about-center {
@@ -483,12 +402,14 @@ nav ul li:hover {
 
 }
 
-@media (max-width: 400px) {
-  .iconSocial {
-    top:300px;
-    left: -60px;
-  }
-  .iconSocial img{
-    width:40px;
-  }
+.containerTecnologias {
+  width:100%;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.containerTecnologias ul li {
+  list-style: none;
 }
