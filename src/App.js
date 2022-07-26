@@ -12,55 +12,36 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
+import Tecnologias from "./components/tecnologias";
 
 
 function App() {
 
   const [dark, setDark] = useState(false);
 
-
-  window.addEventListener("scroll", function () {
-    let elements = document.getElementsByClassName("scroll-page");
-    let elementsLI = document.getElementsByClassName("navLink");
-    let array = [...elementsLI];
-    let screenSize = window.innerHeight;
-
-    for (let i = 0; i < elements.length; i++) {
-      let element = elements[i];
-
-      if (element.getBoundingClientRect().top < screenSize - 50) {
-        elementsLI[i].classList.add("active");
-        array.forEach((elem) => {
-          if (elem !== elementsLI[i]) elem.classList.remove("active");
-        });
-
-      }
-    }
-  });
-
   return (
     <div className="App" style={{ backgroundColor: dark && "black", color: dark && "azure" }}>
-      <div className="modeLightDark" style={{ backgroundColor: !dark && 'black' }}>
-        <div className="light" onClick={() => setDark(true)}>
-            <FaRegMoon style={{ color: !dark && 'black' }}/>
-        </div>
-        <div className="ball" style={{ left: dark ? '15px' : '-15px', backgroundColor: !dark && 'azure' }}></div>
-        <div className="dark" onClick={() => setDark(false)}>
-        <FaRegSun style={{ color: !dark && 'black' }}/>
-        </div>
-      </div>
-      
-      <Navbar bg="light" variant="light">
+      <Navbar collapseOnSelect expand="lg" bg="light" variant="light" fixed="top">
         <Container>
           <Navbar.Brand href="#home">Desarrollador Full-Stack</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link className='navLink' href="#home">Home</Nav.Link>
             <Nav.Link className='navLink' href="#portafolio">Portafolio</Nav.Link>
             <Nav.Link className='navLink' href="#acerca">Acerca de</Nav.Link>
-            <Nav.Link className='navLink' href="#contactame">Contactáme</Nav.Link>
+            <Nav.Link className='navLink' href="#contactame">Contáctame</Nav.Link>
           </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
+      <div className='modeDark'>
+        <div className="light" style={{display:!dark?'block':'none'}} onClick={() => setDark(true)}>
+            <FaRegMoon style={{ color: !dark && 'black' }}/>
+        </div>
+        <div className="dark" style={{display:dark?'block':'none'}} onClick={() => setDark(false)}>
+            <FaRegSun style={{ color: !dark && 'black' }}/>
+        </div>
+      </div>
       <div className="scroll-page prueba" id="Inicio">
         <div className="presentacion">
           <div className="targeta">
@@ -73,7 +54,7 @@ function App() {
             />
             <h2>
               Hola, mi nombre es <span className="font" style={{ color: dark && 'violet' }}>José</span>,<br />
-              vivo en medellin <br />
+              vivo en Colombia - Medellín <br />
               y soy <br /> Desarrollador Full-Stack
             </h2>
             </div>
@@ -95,6 +76,9 @@ function App() {
 
       <div className="scroll-page" id="portafolio">
         <Portafolio />
+      </div>
+      <div className="scroll-page" id="tecnologias">
+        <Tecnologias />
       </div>
       <div className="scroll-page" id="acerca">
         <About />
