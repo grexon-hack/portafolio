@@ -8,38 +8,20 @@ nav {
   width: 100%;
   display: flex;
   justify-content:space-between;
-  background-color: aqua;
   z-index: 3;
-}
-nav ul {
-  display:flex;
-  width: 40%;
-  justify-content: space-around;
-  align-items: center;
-}
-nav ul li {
-  list-style: none;
-  cursor:pointer;
-  font-size: 18px;
-  font-weight: 500;
-  text-shadow: 0 0 5px azure;
-  padding: 8px;
-  border-radius:8px;
-  
-}
-nav ul li a {
-  text-decoration: none;
-  color: black;
-}
-nav ul li:hover {
-  transform: scale(1.1);
-
 }
 .active {
   text-decoration: underline 2px white;
 }
 .imageInitial {
   animation: 1s linear initialImage;
+}
+
+.buttonUp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
 }
 
 @keyframes initialImage {
@@ -79,6 +61,7 @@ nav ul li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .targeta .font {
