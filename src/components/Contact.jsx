@@ -1,10 +1,7 @@
-import React, { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
-import image from "../image/thumbs.png";
+import Swal from 'sweetalert2';
 
 export default function Contactame() {
-  const [exit, setExit] = useState(false);
-  const [error, setError] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,12 +14,36 @@ export default function Contactame() {
         "OTkSGnY6v0ZwviSEg",
       )
       .then(
-        (result) => {
-          setExit(true);
+        () => {
+          Swal.fire({
+            title: 'Genial, pronto me pondre en contacto',
+            icon:'success',
+            width: 400,
+            padding: '3em',
+            color: '#2ec4b6',
+            background: '#fff',
+            backdrop: `
+              rgba(0,0,123,0.4)
+              left top
+              no-repeat
+            `
+          })
           reset(e.target);
         },
         (error) => {
-          setError(true);
+          Swal.fire({
+            title: 'Opss.. Algo a salido mal',
+            icon:'warning',
+            width: 400,
+            padding: '3em',
+            color: '#2ec4b6',
+            background: '#ff4d6d',
+            backdrop: `
+              rgba(0,0,12,0.4)
+              left top
+              no-repeat
+            `
+          })
           reset(e.target);
         },
       );
@@ -34,37 +55,8 @@ export default function Contactame() {
     e.message.value = "";
   };
 
-  useEffect(() => {
-    setInterval(() => {
-      setExit(false);
-      setError(false);
-    }, 15000);
-  }, [exit, error]);
-
   return (
     <div className="container_contactame">
-      {exit && (
-        <div className="target exit">
-          <h2>
-            Tu mensaje fue enviado <br /> con Exito
-          </h2>
-          <div
-            style={{
-              backgroundImage: `url(${image})`,
-              width: "100px",
-              height: "100px",
-              backgroundRepeat: "no-repeat",
-            }}
-          ></div>
-        </div>
-      )}
-      {error && (
-        <div className="target error">
-          <h2>
-            Tu mensaje no fue enviado <br /> con Exito
-          </h2>
-        </div>
-      )}
       <div className="contact-target">
         <div className="formulario">
           <h1>Contáctame</h1>
