@@ -1,5 +1,5 @@
 import image from "../image/myself.jpg";
-import logo from "../image/logo.png";
+
 
 export default function About() {
   return (
@@ -24,9 +24,7 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="logoAbout">
-        <img src={logo} alt="logo react-redux" className="App-logo" />
-      </div>
+
     </div>
   );
 }
