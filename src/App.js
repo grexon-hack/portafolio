@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./components/home/home";
 import Portafolio from './components/portafolio/Portafolio'
 import ResponsiveAppBar from "./components/navbar/nav";
+import Tecnologias from "./components/Technologies/tecnologias";
 
 
 
@@ -27,6 +28,7 @@ function App() {
       </div>
       <Home />
       <Portafolio />
+      <Tecnologias />
     </div>
   );
 }
