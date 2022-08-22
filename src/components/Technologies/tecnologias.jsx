@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Front from './front/Front';
 import style from './tecnologia.module.css';
 // import { TbBrandJavascript } from "react-icons/tb";
 // import { DiJqueryLogo } from "react-icons/di";
@@ -48,6 +49,9 @@ export default function Tecnologias() {
       <div className={front?style.active:style.btn} onClick={handleFront}><span>Front End</span></div>
       <div className={back?style.active:style.btn} onClick={handleBack}><span>Back End</span></div>
       <div className={game?style.active:style.btn} onClick={handleGame}><span>Juego</span></div>
+    </div>
+    <div className={style.containerFBG}>
+      <Front />
     </div>
     </div>
   );
