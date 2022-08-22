@@ -1,25 +1,7 @@
 import { useState } from 'react';
+import Back from './back/Back';
 import Front from './front/Front';
 import style from './tecnologia.module.css';
-// import { TbBrandJavascript } from "react-icons/tb";
-// import { DiJqueryLogo } from "react-icons/di";
-// import {
-//   FaReact,
-//   FaHtml5,
-//   FaCss3,
-//   FaNode,
-//   FaBootstrap,
-//   FaTrello,
-// } from "react-icons/fa";
-// import {
-//   SiRedux,
-//   SiAngular,
-//   SiExpress,
-//   SiSequelize,
-//   SiMicrosoftsqlserver,
-//   SiPostgresql,
-//   SiFirebase,
-// } from "react-icons/si";
 
 export default function Tecnologias() {
 
@@ -51,7 +33,8 @@ export default function Tecnologias() {
       <div className={game?style.active:style.btn} onClick={handleGame}><span>Juego</span></div>
     </div>
     <div className={style.containerFBG}>
-      <Front />
+     {front && <Front />}
+     {back && <Back />}
     </div>
     </div>
   );
