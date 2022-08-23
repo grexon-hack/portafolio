@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Back from './back/Back';
 import Front from './front/Front';
+import Game from './Game/Game';
 import style from './tecnologia.module.css';
 
 export default function Tecnologias() {
@@ -35,6 +36,7 @@ export default function Tecnologias() {
     <div className={style.containerFBG}>
      {front && <Front />}
      {back && <Back />}
+     {game && <Game />}
     </div>
     </div>
   );

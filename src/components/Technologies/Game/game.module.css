@@ -1,0 +1,22 @@
+.containerCard {
+    width: 1000px;
+    height: 600px;
+    border: 1px solid azure;
+}
+
+.card {
+    margin: 5px;
+    display: inline-block;
+    width: calc(1000px / 6 - 10px);
+    height: calc(600px / 5 - 10px);
+    cursor: pointer;
+    background-color: rgba(99, 100, 100, 0.479);
+}
+.card:hover {
+    transform: scale(0.98);
+}
+
+.cardImage {
+    width: calc(1000px / 6 - 10px);
+    height: calc(600px / 5 - 10px);
+}
