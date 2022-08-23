@@ -3,6 +3,7 @@ import Home from "./components/home/home";
 import Portafolio from './components/portafolio/Portafolio'
 import ResponsiveAppBar from "./components/navbar/nav";
 import Tecnologias from "./components/Technologies/tecnologias";
+import About from "./components/about/about";
 
 
 
@@ -29,6 +30,7 @@ function App() {
       <Home />
       <Portafolio />
       <Tecnologias />
+      <About />
     </div>
   );
 }

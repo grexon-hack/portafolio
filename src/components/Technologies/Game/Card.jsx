@@ -3,7 +3,7 @@ import ReactCardFlip from 'react-card-flip';
 import backFace from '../../../image/Game/backcard.png'
 import { useEffect, useState } from 'react';
 
-const Card = ({ name, number, frontFace, flipCard, unFlippedCards, disabledCards, oportunity }) => {
+const Card = ({ name, number, frontFace, flipCard, unFlippedCards, disabledCards, oportunity, puntaje }) => {
 
     const [ isFlipped, setIsFlipped ] = useState(false);
     const [ hasEvent, setHasEvent ] = useState(true);
@@ -23,13 +23,13 @@ const Card = ({ name, number, frontFace, flipCard, unFlippedCards, disabledCards
     },[disabledCards])
 
     useEffect(() => {
-        if(oportunity === 0) {
+        if(oportunity === 0 || puntaje === 15) {
             setTimeout(() => {
                 setIsFlipped(false);
                 setHasEvent(true);
             }, 700);
         }
-    }, [oportunity])
+    }, [oportunity, puntaje])
 
     const handleClick = () => {
         const value = flipCard(name, number);

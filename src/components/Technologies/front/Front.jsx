@@ -11,7 +11,11 @@ const Front = () => {
     const [velocidad, setVelocidad ] = useState(20);
 
     useEffect(() => {
-        if(velocidad > 2 && velocidad !== 20) setVelocidad(velocidad - 1)
+        if(velocidad > 2 && velocidad !== 20){
+            setTimeout(() => {
+                setVelocidad(velocidad - 1)
+            }, 1000);
+        }
     },[velocidad])
 
 
@@ -20,7 +24,7 @@ const Front = () => {
         <ListFront />
         <div className={style.menu} style={{animationDuration:`${velocidad}s`}}>
             <div className={style.toggle}
-            onClick={() => velocidad === 20&& setVelocidad(10)}
+            onClick={() => velocidad === 20&& setVelocidad(19)}
             ><TbBrandJavascript color='orange'/></div>
                 <li className={style.li1}>
                     <span style={{boxShadow:velocidad < 20&&`2px 2px ${20 - velocidad}px crimson`}}><TbBrandHtml5 color='orange'/></span>
@@ -54,7 +58,7 @@ const Front = () => {
                 </span>
                 </div>:
                 <div style={stylePause}>
-                <span style={{cursor:'pointer', padding:'5px'}} onClick={() => setVelocidad(velocidad - 5)}>
+                <span style={{cursor:'pointer', padding:'5px'}} onClick={() => setVelocidad(19)}>
                     Girar
                 </span>
                 </div>}
