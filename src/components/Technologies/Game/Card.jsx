@@ -3,7 +3,7 @@ import ReactCardFlip from 'react-card-flip';
 import backFace from '../../../image/Game/backcard.png'
 import { useEffect, useState } from 'react';
 
-const Card = ({ name, number, frontFace, flipCard, unFlippedCards, disabledCards }) => {
+const Card = ({ name, number, frontFace, flipCard, unFlippedCards, disabledCards, oportunity }) => {
 
     const [ isFlipped, setIsFlipped ] = useState(false);
     const [ hasEvent, setHasEvent ] = useState(true);
@@ -22,6 +22,15 @@ const Card = ({ name, number, frontFace, flipCard, unFlippedCards, disabledCards
         // eslint-disable-next-line
     },[disabledCards])
 
+    useEffect(() => {
+        if(oportunity === 0) {
+            setTimeout(() => {
+                setIsFlipped(false);
+                setHasEvent(true);
+            }, 700);
+        }
+    }, [oportunity])
+
     const handleClick = () => {
         const value = flipCard(name, number);
 
@@ -30,7 +39,7 @@ const Card = ({ name, number, frontFace, flipCard, unFlippedCards, disabledCards
 
     return (
         <div className={style.card}>
-            <ReactCardFlip isFlipped={isFlipped}>
+            <ReactCardFlip isFlipped={isFlipped} flipDirection='vertical'>
                 <img className={style.cardImage} src={backFace} alt="backface" onClick={hasEvent && handleClick}/>
                 <img className={style.cardImage} src={frontFace} alt="frontface" onClick={hasEvent && handleClick}/>
             </ReactCardFlip>

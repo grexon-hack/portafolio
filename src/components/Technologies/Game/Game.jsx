@@ -9,6 +9,8 @@ const Game = () => {
   const [secondCard, setSecondCard] = useState({});
   const [unFlippedCards, setUnFlippedCards] = useState([]);
   const [disabledCards, setDisabledCards] = useState([]);
+  const [ oportunity, setOportunity ] = useState(10);
+  const [ puntaje, setPuntaje ] = useState(0);
 
   const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -27,7 +29,29 @@ const Game = () => {
   useEffect(() => {
     checkForMatch()
     // eslint-disable-next-line
-  }, [secondCard])
+  }, [secondCard]);
+
+  useEffect(() => {
+    if(oportunity === 0){
+        setOportunity(10)
+        setPuntaje(0)
+        setTimeout(() => {
+            shuffleArray(images);
+            setCards(images);
+        }, 700);
+    }
+  },[oportunity])
+
+  useEffect(() => {
+    if(puntaje === 15) {
+      setOportunity(10);
+      setPuntaje(0)
+      setTimeout(() => {
+          shuffleArray(images);
+          setCards(images);
+      }, 700);
+    }
+  }, [puntaje])
 
   const flipCard = (name, number) => {
     if (firstCard.name === name && firstCard.number === number) {
@@ -53,11 +77,13 @@ const Game = () => {
   const disableCards = () => {
     setDisabledCards([firstCard.number, secondCard.number]);
     resetCards();
+    setPuntaje(puntaje + 1)
   };
 
   const unflipCards = () => {
     setUnFlippedCards([firstCard.number, secondCard.number]);
     resetCards();
+    setOportunity(oportunity - 1);
   };
 
   const resetCards = () => {
@@ -77,9 +103,20 @@ const Game = () => {
               flipCard={flipCard}
               unFlippedCards = {unFlippedCards}
               disabledCards = {disabledCards}
+              oportunity = {oportunity}
             />
           );
         })}
+      </div>
+      <div className={style.dataGame}>
+        <div>
+        <span>Oportunidad: </span>
+        <span>{oportunity}</span>
+        </div>
+        <div>
+        <span>Puntaje: </span>
+        <span>{puntaje}</span>
+        </div>
       </div>
     </div>
   );
