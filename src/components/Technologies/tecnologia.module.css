@@ -156,3 +156,12 @@
     }
 
 }
+
+@media (max-width: 555px) {
+    .containerButton {
+        gap:2px;
+    }
+    .containerButton .btn, .active {
+        width:100px;
+    }
+}

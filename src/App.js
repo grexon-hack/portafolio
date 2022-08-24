@@ -5,11 +5,22 @@ import ResponsiveAppBar from "./components/navbar/nav";
 import Tecnologias from "./components/Technologies/tecnologias";
 import About from "./components/about/about";
 import Contactame from "./components/contact/Contact";
+import { BiUpArrowCircle } from 'react-icons/bi';
+import { useState } from "react";
 
 
 
 function App() {
 
+  const [ show, setShow ] = useState(false);
+
+
+    window.onscroll = function() {
+      let y = window.scrollY;
+      if(y > 500) setShow(true)
+        else setShow(false)
+    };
+  
   return (
     <div className="containerApp">
       <ResponsiveAppBar />
@@ -28,7 +39,10 @@ function App() {
           <span style={{animation:'animate 19s linear infinite'}}></span>
         </div>
       </div>
+      <div id='home'>
       <Home />
+      </div>
+      {show&&<a className='linkCircle' href='#home'><BiUpArrowCircle className='buttonArriba'/></a>}
       <div id='portafolio'>
       <Portafolio />
       </div>

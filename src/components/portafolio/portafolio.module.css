@@ -90,3 +90,18 @@
         transform:translateY(0px);
     }
 }
+
+@media (max-width:760px) {
+    .containerCard .card img {
+        width:280px;
+    }
+}
+
+@media (max-width:360px) {
+    .containerCard .card img {
+        width:240px;
+    }
+    .containerCard {
+        margin-bottom:10px;
+    }
+}

@@ -33,6 +33,7 @@ const Home = () => {
       <div className={style.contentTwo}>
         <div className={style.border}>
           <Avatar
+            className={style.avatarImg}
             alt="Remy Sharp"
             src={image}
             sx={{ width: 280, height: 280 }}
