@@ -4,6 +4,7 @@ import Portafolio from './components/portafolio/Portafolio'
 import ResponsiveAppBar from "./components/navbar/nav";
 import Tecnologias from "./components/Technologies/tecnologias";
 import About from "./components/about/about";
+import Contactame from "./components/contact/Contact";
 
 
 
@@ -31,6 +32,7 @@ function App() {
       <Portafolio />
       <Tecnologias />
       <About />
+      <Contactame />
     </div>
   );
 }

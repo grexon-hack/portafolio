@@ -1,3 +1,7 @@
+import style from './contact.module.css';
+import img1 from '../../image/contact/contact1.png';
+import img2 from '../../image/contact/contact2.png';
+import img3 from '../../image/contact/contact3.png';
 import emailjs from "@emailjs/browser";
 import Swal from 'sweetalert2';
 
@@ -56,37 +60,48 @@ export default function Contactame() {
   };
 
   return (
-    <div className="container_contactame">
-      <div className="contact-target">
-        <div className="formulario">
+    <div className={style.containerCont}>
+      <div className={style.containerCard}>
           <h1>Contáctame</h1>
+        <div className={style.form}>
           <form onSubmit={(e) => sendEmail(e)}>
+            <label htmlFor="name">Nombre</label>
+            <br />
             <input
               type="text"
               name="name"
-              placeholder="nombre"
+              placeholder="Nombre Completo"
               autoComplete="off"
               required
             />
+            <br />
+            <label htmlFor="Correo">Correo Electronico</label>
             <br />
             <input
               type="email"
               name="Correo"
-              placeholder="Correo electronico"
+              placeholder="joseSarabia@ejemplo.com"
               autoComplete="off"
               required
             />
+            <br />
+            <label htmlFor="message">Mensaje</label>
             <br />
             <textarea
               name="message"
               rows="6"
-              placeholder="mensaje"
+              placeholder=""
               autoComplete="off"
               required
             />
             <br />
-            <button className="buttonForm">Enviar</button>
+            <button className="buttonForm" type='submit'>Enviar</button>
           </form>
+          <div className={style.containerImage}>
+            <img src={img1} alt="one" style={{transform:'translate(-200px, -60%)'}}/>
+            <img src={img2} alt="two" style={{transform:'translate(-300px, 180%)'}}/>
+            <img src={img3} alt="three" style={{transform:'translate(100px, 120%)'}}/>
+          </div>
         </div>
       </div>
     </div>
