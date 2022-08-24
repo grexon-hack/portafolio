@@ -29,10 +29,18 @@ function App() {
         </div>
       </div>
       <Home />
+      <div id='portafolio'>
       <Portafolio />
+      </div>
+      <div id='tecnologias'>
       <Tecnologias />
+      </div>
+      <div id='acerca'>
       <About />
+      </div>
+      <div id='contáctame'>
       <Contactame />
+      </div>
     </div>
   );
 }

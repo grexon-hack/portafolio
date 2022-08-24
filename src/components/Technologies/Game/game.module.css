@@ -35,3 +35,51 @@
     gap:20px;
     align-items:center;
 }
+
+@media (max-width:1220px) {
+    .containerGame {
+        height:fit-content;
+    }
+    .containerCard {
+        width:800px;
+        height:500px;
+    }
+    .card {
+        width: calc(800px / 6 - 10px);
+        height: calc(500px / 5 - 10px);
+    }
+    .cardImage {
+        width: calc(800px / 6 - 10px);
+        height: calc(500px / 5 - 10px);
+    }
+}
+
+@media (max-width: 810px) {
+    .containerCard {
+        width:600px;
+        height:400px;
+    }
+    .card {
+        width: calc(600px / 6 - 10px);
+        height: calc(400px / 5 - 10px);
+    }
+    .cardImage {
+        width: calc(600px / 6 - 10px);
+        height: calc(400px / 5 - 10px);
+    }
+}
+
+@media (max-width: 610px) {
+    .containerCard {
+        width:400px;
+        height:500px;
+    }
+    .card {
+        width: calc(400px / 5 - 10px);
+        height: calc(500px / 6 - 10px);
+    }
+    .cardImage {
+        width: calc(400px / 5 - 10px);
+        height: calc(500px / 6 - 10px);
+    }
+}

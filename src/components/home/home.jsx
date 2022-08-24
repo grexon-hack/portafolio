@@ -14,13 +14,13 @@ const Home = () => {
           onInit={(typewriter) => {
             typewriter
               .typeString("Hola ")
-              .pauseFor(1000)
+              .pauseFor(500)
               .typeString("<br /> Me llamó José ")
-              .pauseFor(1000)
+              .pauseFor(500)
               .typeString("<br /> Vivo en Medellín-Colombia ")
-              .pauseFor(1000)
+              .pauseFor(500)
               .typeString("<br /> y ")
-              .pauseFor(1000)
+              .pauseFor(500)
               .typeString("<br /> Soy Desarrollador Full Stack")
               .start();
             }}

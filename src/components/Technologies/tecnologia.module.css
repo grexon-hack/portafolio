@@ -141,3 +141,18 @@
     box-shadow: 0 0 5px crimson,
     0 0 15px crimson,0 0 30px crimson,0 0 60px crimson;
 }
+
+@media (max-width:1000px) {
+    .containerTech {
+        flex-direction:column;
+        padding-top: 60px;
+        height: fit-content;
+    }
+    .containerTech > div {
+        width:100%;
+    }
+    .containerButton {
+        flex-direction:row;
+    }
+
+}

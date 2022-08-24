@@ -13,7 +13,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import style from './nav.module.css';
 // import image from '../../image/perfilCV.png'
 
-const pages = ["Portafolio", "Acerca", "Contáctame"];
+const pages = ["portafolio","tecnologias", "acerca", "contáctame"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -82,7 +82,7 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center"><a href={`#${page}`}>{page}</a></Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -95,7 +95,7 @@ const ResponsiveAppBar = () => {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                {page}
+                <a href={`#${page}`}>{page}</a>
               </Button>
             ))}
           </Box>

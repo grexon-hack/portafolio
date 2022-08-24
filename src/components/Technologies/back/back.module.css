@@ -143,3 +143,8 @@
     text-align: center;
     z-index:3;
 }
+
+@media (max-width: 820px) {
+    .menu{width:300px;}
+    .menu li {transform-origin: 150px;}
+}
