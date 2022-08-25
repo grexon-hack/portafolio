@@ -1,0 +1,169 @@
+.containerTech {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerFBG {
+    flex-grow:4;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerButton {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.containerButton .btn, .active {
+    position: relative;
+    width: 155px;
+    height: 50px;
+    margin: 20px;
+}
+
+.containerButton .btn span, .active span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: azure;
+    z-index: 1;
+    font-weight: 400;
+    letter-spacing: 1px;
+    overflow: hidden;
+    transition: .5s;
+    backdrop-filter: blur(15px);
+    cursor:pointer;
+    text-transform: uppercase;
+}
+
+.containerButton .btn:hover span, .active:hover span {
+    letter-spacing: 3px;
+}
+
+.containerButton .btn span::before, .active span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0.15),
+    transparent);
+    transform: skewX(45deg) translateX(0);
+}
+
+.containerButton .btn:hover span::before, .active:hover span::before {
+    transform: skewX(45deg) translateX(200%);
+}
+
+.containerButton .btn::before, .active::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: .5s;
+    transition-delay: 0s;
+
+}
+
+.containerButton .active::before {
+    bottom: 0;
+    height: 50%;
+    width: 90%;
+    transition-delay: 0.5s;
+}
+
+.containerButton .btn::after, .active::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: .5s;
+    transition-delay: 0s;
+
+}
+
+.containerButton .active::after {
+    top: 0;
+    height: 50%;
+    width: 90%;
+    transition-delay: 0.5s;
+}
+
+.containerButton .btn:nth-child(1)::before,
+.containerButton .btn:nth-child(1)::after,
+.containerButton .active:nth-child(1)::before,
+.containerButton .active:nth-child(1)::after {
+    background: crimson;
+    box-shadow: 0 0 5px crimson,
+    0 0 15px crimson,0 0 30px crimson,0 0 60px crimson;
+}
+
+.containerButton .btn:nth-child(2)::before,
+.containerButton .btn:nth-child(2)::after,
+.containerButton .active:nth-child(2)::before,
+.containerButton .active:nth-child(2)::after {
+    background: aqua;
+    box-shadow: 0 0 5px aqua,
+    0 0 15px aqua,0 0 30px aqua,0 0 60px aqua;
+}
+
+.containerButton .btn:nth-child(3)::before,
+.containerButton .btn:nth-child(3)::after,
+.containerButton .active:nth-child(3)::before,
+.containerButton .active:nth-child(3)::after {
+    background: crimson;
+    box-shadow: 0 0 5px crimson,
+    0 0 15px crimson,0 0 30px crimson,0 0 60px crimson;
+}
+
+@media (max-width:1000px) {
+    .containerTech {
+        flex-direction:column;
+        padding: 60px 0;
+        height: fit-content;
+    }
+    .containerTech > div {
+        width:100%;
+    }
+    .containerButton {
+        flex-direction:row;
+    }
+
+}
+
+@media (max-width: 555px) {
+    .containerButton {
+        gap:2px;
+    }
+    .containerButton .btn, .active {
+        width:100px;
+        margin:20px 5px;
+    }
+}

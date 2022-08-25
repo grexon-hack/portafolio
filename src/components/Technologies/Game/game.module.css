@@ -1,0 +1,118 @@
+.containerGame {
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    animation: shower 2s linear normal;
+}
+@keyframes shower {
+    0%{opacity: .2;}
+    100%{opacity:1;}
+}
+.containerCard {
+    width: 1000px;
+    height: 600px;
+}
+
+.card {
+    margin: 5px;
+    display: inline-block;
+    width: calc(1000px / 6 - 10px);
+    height: calc(600px / 5 - 10px);
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(0.98);
+}
+
+.cardImage {
+    width: calc(1000px / 6 - 10px);
+    height: calc(600px / 5 - 10px);
+    background-color: rgba(99, 100, 100, 0.479);
+}
+
+.dataGame {
+    display:flex;
+    justify-content: flex-end;
+    gap:20px;
+    align-items:center;
+}
+
+@media (max-width:1220px) {
+    .containerGame {
+        height:fit-content;
+    }
+    .containerCard {
+        width:800px;
+        height:500px;
+    }
+    .card {
+        width: calc(800px / 6 - 10px);
+        height: calc(500px / 5 - 10px);
+    }
+    .cardImage {
+        width: calc(800px / 6 - 10px);
+        height: calc(500px / 5 - 10px);
+    }
+}
+
+@media (max-width: 810px) {
+    .containerCard {
+        width:600px;
+        height:400px;
+    }
+    .card {
+        width: calc(600px / 6 - 10px);
+        height: calc(400px / 5 - 10px);
+    }
+    .cardImage {
+        width: calc(600px / 6 - 10px);
+        height: calc(400px / 5 - 10px);
+    }
+}
+
+@media (max-width: 610px) {
+    .containerCard {
+        width:400px;
+        height:500px;
+    }
+    .card {
+        width: calc(400px / 5 - 10px);
+        height: calc(500px / 6 - 10px);
+    }
+    .cardImage {
+        width: calc(400px / 5 - 10px);
+        height: calc(500px / 6 - 10px);
+    }
+}
+@media (max-width: 410px) {
+    .containerCard {
+        width:360px;
+        height:460px;
+    }
+    .card {
+        width: calc(360px / 5 - 10px);
+        height: calc(460px / 6 - 10px);
+    }
+    .cardImage {
+        width: calc(360px / 5 - 10px);
+        height: calc(460px / 6 - 10px);
+    }
+}
+
+@media (max-width: 360px) {
+    .containerCard {
+        width:300px;
+        height:400px;
+    }
+    .card {
+        width: calc(300px / 5 - 10px);
+        height: calc(400px / 6 - 10px);
+    }
+    .cardImage {
+        width: calc(300px / 5 - 10px);
+        height: calc(400px / 6 - 10px);
+    }
+}

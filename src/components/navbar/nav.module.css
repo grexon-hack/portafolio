@@ -1,0 +1,16 @@
+.containerNav {
+    background-color:rgba(173, 216, 230, 0.318) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.containerNav a {
+    text-decoration: none;
+    color: azure;
+}
+
+@media (max-width: 650px) {
+    .showPicture {
+        display: none;
+    }
+}
