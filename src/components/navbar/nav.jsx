@@ -77,6 +77,7 @@ const ResponsiveAppBar = ({show}) => {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
+              className={style.menuBar}
               sx={{
                 display: { xs: "block", md: "none" },
               }}
