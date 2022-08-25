@@ -3,6 +3,8 @@ import image2 from '../../image/climaApp.PNG';
 import image3 from '../../image/countryApp.PNG';
 import image4 from '../../image/moviesApp.PNG';
 import image7 from '../../image/yourjob.PNG';
+import image8 from '../../image/softpel.PNG';
+
 
 
 let arrayPicture = [
@@ -10,9 +12,17 @@ let arrayPicture = [
     nombre: 'YourJob',
     img: image7,
     info: 'aplicacion creada para busqueda tanto de trabajos, como de empleados. hecha con react.js, redux, node.js, sequelize, express, postgres',
-    url: 'https://github.com/grexon-hack/yourjob',
+    url: 'https://github.com/grexon-hack/Your-Job',
     deploy: 'https://your-job-seven.vercel.app'
-},{
+},
+{
+    nombre :"Softpel",
+    img:image8,
+    info:"Software enfocado a la venta de servicios de peluquería a domicilio, con Paypal incorporado como metodo de pago",
+    url:"https://github.com/grexon-hack?tab=repositories",
+    deploy:"https://softpel2.vercel.app"
+},
+{
     nombre: 'App-Meteorologica',
     img: image2,
     info: 'Aplicación creada haciendo peticion a API externa con tecnologias como: html, css, react, redux e integración de mapBox-GL',
@@ -22,7 +32,7 @@ let arrayPicture = [
     nombre: 'Countries-App',
     img: image3,
     info: 'Aplicacion creada con tecnologias como: html, css, react, redux, node.js, express, sequelize y postgres',
-    url: 'https://github.com/grexon-hack?tab=repositories',
+    url: 'https://github.com/grexon-hack/Countries-PI',
 
 },{
     nombre: 'Movies-App',

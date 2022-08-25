@@ -5,11 +5,15 @@
     justify-content:center;
     align-items:center;
     flex-direction: column;
+    animation: shower 2s linear normal;
+}
+@keyframes shower {
+    0%{opacity: .2;}
+    100%{opacity:1;}
 }
 .containerCard {
     width: 1000px;
     height: 600px;
-    border: 1px solid azure;
 }
 
 .card {
@@ -81,5 +85,34 @@
     .cardImage {
         width: calc(400px / 5 - 10px);
         height: calc(500px / 6 - 10px);
+    }
+}
+@media (max-width: 410px) {
+    .containerCard {
+        width:360px;
+        height:460px;
+    }
+    .card {
+        width: calc(360px / 5 - 10px);
+        height: calc(460px / 6 - 10px);
+    }
+    .cardImage {
+        width: calc(360px / 5 - 10px);
+        height: calc(460px / 6 - 10px);
+    }
+}
+
+@media (max-width: 360px) {
+    .containerCard {
+        width:300px;
+        height:400px;
+    }
+    .card {
+        width: calc(300px / 5 - 10px);
+        height: calc(400px / 6 - 10px);
+    }
+    .cardImage {
+        width: calc(300px / 5 - 10px);
+        height: calc(400px / 6 - 10px);
     }
 }

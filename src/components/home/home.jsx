@@ -2,7 +2,8 @@ import style from "./home.module.css";
 import image from "../../image/myself.jpg";
 import Avatar from "@mui/material/Avatar";
 import Typewriter from "typewriter-effect";
-import cv from '../../image/jose-sarabia.pdf'
+import cv from '../../image/jose-sarabia.pdf';
+import Tilt from 'react-parallax-tilt';
 
 const Home = () => {
   return (
@@ -32,12 +33,14 @@ const Home = () => {
       </div>
       <div className={style.contentTwo}>
         <div className={style.border}>
+          <Tilt glareEnable={true}>
           <Avatar
             className={style.avatarImg}
             alt="Remy Sharp"
             src={image}
             sx={{ width: 280, height: 280 }}
           />
+          </Tilt>
         </div>
         <div className={style.contentButton}>
             <a href={cv} download="CV"><span>Descargar CV</span></a>

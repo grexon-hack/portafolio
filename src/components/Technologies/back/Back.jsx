@@ -40,12 +40,12 @@ const Back = () => {
                 </li>
         </div>
 
-               {velocidad < 20 ? <div style={stylePause}>
+               {velocidad < 20 ? <div className={style.buttonSpinner} style={stylePause}>
                 <span style={{cursor:'pointer', padding:'5px'}}>
                     <FaPauseCircle onClick={() => setVelocidad(20)}/>
                 </span>
                 </div>:
-                <div style={stylePause}>
+                <div className={style.buttonSpinner} style={stylePause}>
                 <span style={{cursor:'pointer', padding:'5px'}} onClick={() => setVelocidad(velocidad - 5)}>
                     Girar
                 </span>

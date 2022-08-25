@@ -1,18 +1,18 @@
 .containerCont {
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 65px);
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top:65px;
 }
 
 .containerCard {
     width:80%;
-    height: 80%;
+    height: 90%;
     display: flex;
     flex-direction:column;
-    margin-top: 10px;
     position:relative;
     overflow:hidden;
     backdrop-filter: blur(10px);
@@ -26,8 +26,8 @@
 .containerCard::before {
     content: '';
     position: absolute;
-    margin-left:-100px;
-    width: 120%;
+    margin-left:-300px;
+    width: 2000px;
     height: 100%;
     background: linear-gradient(crimson, aqua);
     z-index:-1;
@@ -68,7 +68,7 @@
 .form form {
     flex-grow: 1;
     width: 100%;
-    padding: 20px;
+    padding: 0 20px;
 
 }
 
@@ -112,4 +112,97 @@ form button:hover {
 
 .form .containerImage img {
     position:absolute;
+}
+.contactImage1 {
+    transform: translate(-700px, -60%);
+    z-index: -1;
+}
+.contactImage2 {
+    transform: translate(-300px, 180%);
+}
+.contactImage3 {
+    transform: translate(20px, -50%);
+
+}
+
+@media (max-width:1200px) {
+    .contactImage1 {
+        transform: translate(-500px, -70%);
+        z-index: -1;
+    }
+   .contactImage2 {
+       transform: translate(-260px, 180%);
+    }
+    .containerCard::before {
+       transform:rotate(-45deg) translate(200px, 45%);
+    }
+}
+
+@media (max-width:960px) {
+    .contactImage1 {
+        transform: translate(-500px, -70%);
+        z-index: -1;
+    }
+   .contactImage3 {
+       transform: translate(-20px, -50%);
+    }
+    .containerCard::before {
+       transform:rotate(-45deg) translate(300px, 25%);
+    }
+}
+@media (max-width:780px) {
+    .contactImage1 {
+        transform: translate(-300px, -70%);
+        z-index: -1;
+    }
+   .contactImage3 {
+       transform: translate(-40px, -50%) scale(.6);
+    }
+    .containerCard::before {
+       transform:rotate(-45deg) translate(300px, 5%);
+    }
+}
+
+@media (max-width:500px) {
+    .containerCard {
+        width:90%;
+    }
+    .containerCard .form {
+        flex-direction: column;
+        width: 100%;
+    }
+    .form form {
+        padding: 5px 10px;
+        width: 100%;
+    }
+    form input, textarea {
+        width: 90%;
+        margin: 5px 0;
+        padding: 5px;
+    }
+    .form form label {
+        font-size: 1rem;
+    }
+    .containerCard h1 {
+        font-size: 2rem;
+    }
+    .contactImage1 {
+        transform: translate(-10px, -310%);
+        z-index: -1;
+    }
+    .contactImage2 {
+        transform: translate(240px, -120%);
+    }
+    .contactImage3 {
+        transform: translate(20px, -50%);
+
+    }
+}
+@media (max-width:360px) {
+     .contactImage3 {
+        transform: translate(10px, -50%) scale(.6);
+    }
+    .contactImage2 {
+        transform: translate(140px, -100%);
+    }
 }

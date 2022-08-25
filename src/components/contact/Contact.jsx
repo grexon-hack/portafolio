@@ -98,9 +98,9 @@ export default function Contactame() {
             <button className="buttonForm" type='submit'>Enviar</button>
           </form>
           <div className={style.containerImage}>
-            <img src={img1} alt="one" style={{transform:'translate(-200px, -60%)'}}/>
-            <img src={img2} alt="two" style={{transform:'translate(-300px, 180%)'}}/>
-            <img src={img3} alt="three" style={{transform:'translate(100px, 120%)'}}/>
+            <img className={style.contactImage1} src={img1} alt="one" />
+            <img className={style.contactImage2} src={img2} alt="two" />
+            <img className={style.contactImage3} src={img3} alt="three"/>
           </div>
         </div>
       </div>

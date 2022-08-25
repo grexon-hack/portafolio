@@ -10,6 +10,7 @@ import { useState } from "react";
 
 
 
+
 function App() {
 
   const [ show, setShow ] = useState(false);
@@ -20,10 +21,11 @@ function App() {
       if(y > 500) setShow(true)
         else setShow(false)
     };
+
   
   return (
     <div className="containerApp">
-      <ResponsiveAppBar />
+      <ResponsiveAppBar show={show}/>
       <div className="container">
         <div className="bubbles">
           <span style={{animation:'animate 15s linear infinite'}}></span>
@@ -49,7 +51,7 @@ function App() {
       <div id='tecnologias'>
       <Tecnologias />
       </div>
-      <div id='acerca'>
+      <div id='acerca' >
       <About />
       </div>
       <div id='contáctame'>

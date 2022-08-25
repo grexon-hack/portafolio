@@ -12,6 +12,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .containerButton {
     flex-grow: 1;
     display: flex;
@@ -145,7 +146,7 @@
 @media (max-width:1000px) {
     .containerTech {
         flex-direction:column;
-        padding-top: 60px;
+        padding: 60px 0;
         height: fit-content;
     }
     .containerTech > div {
@@ -163,5 +164,6 @@
     }
     .containerButton .btn, .active {
         width:100px;
+        margin:20px 5px;
     }
 }

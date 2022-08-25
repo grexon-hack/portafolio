@@ -6,16 +6,16 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import Container from "@mui/material/Container";
-// import Avatar from "@mui/material/Avatar";
+import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { GiHamburgerMenu } from "react-icons/gi";
 import style from './nav.module.css';
-// import image from '../../image/perfilCV.png'
+import image from '../../image/perfilCV.png'
 
 const pages = ["portafolio","tecnologias", "acerca", "contáctame"];
 
-const ResponsiveAppBar = () => {
+const ResponsiveAppBar = ({show}) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -25,6 +25,7 @@ const ResponsiveAppBar = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
 
   return (
     <AppBar position="fixed" className={style.containerNav}>
@@ -47,9 +48,9 @@ const ResponsiveAppBar = () => {
           >
             DESARROLLADOR <br /> FULL STACK
           </Typography>
-          {/* <Box sx={{ flexGrow: 1 }}>
+          {show&&<Box className={style.showPicture} sx={{ flexGrow: 1 }}>
             <Avatar alt="Remy Sharp" src={image}  sx={{ width: 56, height: 56 }}/>
-          </Box> */}
+          </Box>}
 
           <Box sx={{ flexGrow: 0, display: { xs: "flex", md: "none" }, ml:'auto' }}>
             <IconButton

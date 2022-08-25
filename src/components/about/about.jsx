@@ -2,9 +2,11 @@ import style from "./about.module.css";
 import image from "../../image/desarrollador.png";
 import Tilt from "react-parallax-tilt";
 
+
 export default function About() {
+
   return (
-    <div className={style.containerAbout}>
+    <div className={style.containerAbout}  data-aos="zoom-in">
       <div className={style.containerCenter}>
         <Tilt>
           <div className={style.blockCenter}>
